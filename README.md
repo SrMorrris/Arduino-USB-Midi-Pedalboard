@@ -88,4 +88,4 @@ You will use two buttons one button for increment and the other one for decremen
 
 *Using i2c lcd screen for showing 8 potentiometers graphbars (early stages right now).
 
-*dreaming about more updates (control.surface it's my god)
+*dreaming about more updates (control.surface it's my god).
