@@ -18,7 +18,7 @@ Materials:
 
    -*24 220 ohms resistors for leds.
 	
-    -*16 RGB leds (cathode common)(but you can use whatever led-model you want,
+   -*16 RGB leds (cathode common)(but you can use whatever led-model you want,
     better the cheapest one...but think you will need more than 16 RGB leds..
     with single coloured leds you will need 24 leds).
 	two banks with eight positions each bank and 8 pedal switches ON/OFF. Total=24 leds)
@@ -29,10 +29,10 @@ Materials:
 
    *Encoder
 
-	*JACK female 6,5 mm (for connecting expression/volume pedals to analog 
+   *JACK female 6,5 mm (for connecting expression/volume pedals to analog 
 	inputs in arduino or multiplexer) 
 
-    *more,more,more updates (soon)...
+   *more,more,more updates (soon)...
    
 	
    HOW TO build your pedalboard
@@ -44,13 +44,13 @@ Materials:
 -Install Hiduino firmware (for usb-midi communication).
 Or you can use another way to get usbMIDI comunication using programs like hairless, or loopbe1, etc..). 
 
-    NOTE:Arduino uses usb serial comunication, but you will need usb MIDI comunication 
-   (in order to get recognised device for daws). 
-    So you can use other programs like hairless,loopbe1,etc.. for usb MIDI comunication,but i have prefer hiduino firmware.
-    When your arduino it´s on usb Midi comunication notice that you can´t upload sketches to your arduino 
-    (you need to come back to serial usb comunication).
-    People uses "atmel flip" for the flash proccess into hiduino and then reflash to arduino for upload sketches.
-    You can implement one switch for change into hiduino or arduino state (see tutorials about hiduino or pimpmymocolufa).
+   NOTE:Arduino uses usb serial comunication, but you will need usb MIDI comunication 
+ (in order to get recognised device for daws). 
+  So you can use other programs like hairless,loopbe1,etc.. for usb MIDI comunication,but i have prefer hiduino firmware.
+  When your arduino it´s on usb Midi comunication notice that you can´t upload sketches to your arduino 
+  (you need to come back to serial usb comunication).
+  People uses "atmel flip" for the flash proccess into hiduino and then reflash to arduino for upload sketches.
+  You can implement one switch for change into hiduino or arduino state (see tutorials about hiduino or pimpmymocolufa).
 
 
 -Upload the sketch "Usb_MIDI_Pedal_board Arduino.ino" to your arduino.
