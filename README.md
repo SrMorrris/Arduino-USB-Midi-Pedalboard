@@ -1,47 +1,44 @@
-                               # ArduinoMIDIfootswitch
+ # ArduinoMIDIfootswitch
 
 Build a Pedal board to use on your DAW´s (cubase,ableton,etc) or plugins (amplitube,guitar rig,etc..).
 
-                                     Materials:
-									 
-                                     *Arduino.
-									 
-                                    *One switch :used to change between arduino usb serial comunication or									 									
-								     the hiduino usb midi comunication on your arduino. The switch ON/OFF it´s connected 
-									 to 2 pins arduino (atmel16u2 ICSP) (see hiduino tutorials how to achieve it). 
-									 
-                                     *23 Buttons :(11 buttons will be used for foot-switching)
-									 
-                                     *2 multiplexers cd74hc4067.  : (more digital or analog inputs for arduino)
-									 
-                                     *16 potentiometers 10k.
-									 
-                                     *24 220 ohms resistors for leds.
-									 
-                                     *16 RGB leds (cathode common)(but you can use whatever led-model you want,
-									  better the cheapest one...but think you will need more than 16 RGB leds..
-									  with single coloured leds you will need 24 leds).
-									 (two banks with eight positions each bank and 8 pedal switches ON/OFF. Total=24 leds)
-									 
-									  
-                                     OPTIONAL(under construction)
-									 
-                                     *lcd screen (I2C 20x04). (but much better if you got an oled SPI screen). 
-									 
-                                     *Encoder
-                                     
-									 *JACK female 6,5 mm (for connecting expression/volume pedals to analog 
-									 inputs in arduino or multiplexer) 
-									 
-                                     *more,more,more updates (soon)...
+Materials:
+ 
+  -*Arduino.
+  
+  -*One switch :used to change between arduino usb serial comunication or									 									
+	the hiduino usb midi comunication on your arduino. The switch ON/OFF it´s connected 
+    to 2 pins arduino (atmel16u2 ICSP) (see hiduino tutorials how to achieve it). 
 
-                                      
-									  
-									  HOW TO 
-									  
-									  
+   -*23 Buttons :(11 buttons will be used for foot-switching)
+	
+   -*2 multiplexers cd74hc4067.  : (more digital or analog inputs for arduino)
+	
+   -*16 potentiometers 10k.
+
+   -*24 220 ohms resistors for leds.
+	
+    -*16 RGB leds (cathode common)(but you can use whatever led-model you want,
+    better the cheapest one...but think you will need more than 16 RGB leds..
+    with single coloured leds you will need 24 leds).
+	two banks with eight positions each bank and 8 pedal switches ON/OFF. Total=24 leds)
+
+   OPTIONAL(under construction)
+
+   *lcd screen (I2C 20x04). (but much better if you got an oled SPI screen). 
+
+   *Encoder
+
+	*JACK female 6,5 mm (for connecting expression/volume pedals to analog 
+	inputs in arduino or multiplexer) 
+
+    *more,more,more updates (soon)...
+   
+	
+   HOW TO build your pedalboard
+
 -Build your pedalboard.(i give you one example)									  
-									  
+
 -Install libraries for arduino IDE.  (Control.Surface, encoder,etc.. you will see include libraries on the sketch)
 
 -Install Hiduino firmware (for usb-midi communication).
@@ -88,4 +85,4 @@ You will use two buttons one button for increment and the other one for decremen
 
 *Using i2c lcd screen for showing 8 potentiometers graphbars (early stages right now).
 
-*dreaming about more updates (control.surface it's my god).
+*dreaming about more updates (control.surface it's my god)
