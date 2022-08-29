@@ -24,10 +24,13 @@ Watch this..
 
 
 This MEGA board can be flashed into HIDUINO:
+
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
 
 
 Maybe you can't see there but there´s a very tiny chip named at16u2 and one ICSP port attached to this chip.
+
 
 
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
