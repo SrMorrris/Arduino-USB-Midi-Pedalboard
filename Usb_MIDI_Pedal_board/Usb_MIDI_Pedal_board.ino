@@ -44,25 +44,7 @@
  ****************************************************************************************************              
  ****************************************CONFIGURE****************************************************             
  *Open your Daw. Select your hiduino usb midi device and then press "midi learn" in the plugin or DAW 
- *to configure your pedalboard. 
- *
- *First you can configure the first pedal (select midi learn) with the four bankable potentiometers.
- *And then configure the pedal effect ON/OFF button.or another button in this first pedal,
- *
- *Second:press increment or decrement bank button and then configure the next pedal with the same 
- *4 potentiometers. And don´t forget to configure the pedal effect ON/OFF button.
- *
- * And...so on..until the eight bank position. until the eight pedal or the eight amp/rack 
- * NOTICE:You can turn ON/OFF each pedal effect with two different buttons. 
- * So two different buttons for turn on/off effect on each 8 pedal.
- *
- * * EXAMPLE CONFIG: click mouse right button on your first pedal in amplitube and select "midi learn" 
- * for the gain potentiometer,for example,..then move one bankable potentiometer of your pedalboard..
- * or click mouse right button upon pedal effect ON/OFF and select "midi learn" and press one
- *  of the led buttons("pedalswitches") in the pedalboard and then the  button 
- *("pedal-effect.principal-button") of the pedalboard .
- *
- *
+ *to configure your pedalboard. move or press your pedalboard,and that`s it
  **************************************************************************************************
  ******************************************************************************************************************************         
 Colaborations,suggestions,schematics,some libraries here: https://srmorrris.github.io/ArduinoUSBMidiPedal-board/
