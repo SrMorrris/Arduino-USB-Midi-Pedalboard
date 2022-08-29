@@ -4,7 +4,7 @@ You can see all my MIDI devices on my principal web-page or my github repositori
 
 https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
 
-But i can show you my first device built with an arduino.
+But now, i can show you my first device, built with an arduino.
 
 
  # Arduino-USB-MIDI-footswitch
@@ -16,13 +16,16 @@ You can use whatever Arduino board you want..
 
 If you use a MEGA or UNO, the board needs to be flashed, in the Atmega8u2 or the Atmega16u2 chip in order to get USB-MIDI comunication. 
 
-be aware that certain boards can't be flashed..like the CH340G boards.., in this cases you will need other pc-programs for achieve the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
+Be aware that certain boards can't be flashed..like the CH340G boards.., in this cases you will need other pc-programs in order to get the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
 
 Watch this..
 
 
 This MEGA board can be flashed into HIDUINO:
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
+
+
+Maybe you can't see there but there´s a very tiny chip named at16u2 and one ICSP port attached to this chip.
 
 
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
@@ -81,13 +84,13 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 Or you can use another way to get usb-MIDI comunication using programs like hairless, or loopbe1, etc... 
 
-   ( NOTE: Arduino uses usb-serial comunication (CH340G are not the best ones for MIDI..i think..), but you   will need the usb-MIDI comunication.  (you need to comunicate with your DAW or plugin).
+    NOTE: Arduino uses usb-serial comunication (CH340G are not the best ones for MIDI..i think..), but you    will need the usb-MIDI comunication.  (you need to comunicate with your DAW or plugin).
     So you can use other pc-programs like hairless,loopbe1,midi-yoke, etc.. for usb-MIDI comunication, but i have prefer the hiduino firmware (pimp my moco lufa, or usb midiklik )
     Hiduino brings the native USB-MIDI comunication (teensy or leonardo only needs to upload an sketch).
     So you connect your usb and the device will be recognized as an USB-Midi device.
     When your arduino it's on usb-Midi comunication will be notice that you can´t upload sketches to your arduino (you will need to come back to serial-usb comunication for being allow to upload sketches).
     People uses "atmel flip" for the flashing-proccess into hiduino and then reflash into arduino for upload sketches.
-    But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, etc..)   )
+    But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, etc..)   
 
   I have followed this video in order to get the hiduino/arduino switch.(With my Mega2560).
 
@@ -96,17 +99,23 @@ Or you can use another way to get usb-MIDI comunication using programs like hair
 
 -Upload the sketch "Usb_MIDI_Pedal_board Arduino.ino" into your arduino. That´s it.
 
+ # How it works..
 
--Using multiplexers for more analog and digital outputs on arduino. 
+
+-Using multiplexers for more analog and digital outputs in arduino...
 
 Gives more analog potentiometers and more digital buttons.
 (but you can skip this option if you are happy with your digital/analog outputs in your arduino). 
+
 (one multiplexer named mux2 it's for 16 digital outputs and the other multiplexer , named mux3, it's for 16 analog outputs).
 
 -I have used 16 analog potentiometers and 23 digital buttons in my pedalboard.
+
 (you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers minimum).
 
--Using 8 leds and 8 momentary push button. The leds are showing the pedal-state, if it's on or off .
+-Using 8 leds and 8 momentary push button. 
+
+The leds are showing the pedal-state, if it's on or off .
 (8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!).
 So you push the micro foot-switch button and the pedal goes to ON and the led turns to on the green-light).
 And you push it , once more... and the pedal goes to OFF and the led goes to OFF too).
@@ -143,7 +152,7 @@ You will use two buttons on BANKAMP... one button it's for increment and the oth
 
 
 
-I have quit this project but i have got 16 volume bars for each potentiometer (16 graph-bars)..one volume/wah pedal..one encoder...but i have quited because i have found some other MIDI projects so much better than this one...
+I have quit of this project but i have achieved 16 volume bars for each potentiometer (16 graph-bars on screen )..one volume/wah pedal.. one encoder... but i have quited because i have found some other MIDI projects so much better than this one...
 
 
-  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS.
+  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. But you can ask me about it..
