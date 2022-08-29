@@ -17,6 +17,7 @@ This MEGA board can be flashed into HIDUINO:
 
 
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/RPdg58L/172225-860a32072d.png" alt="172225-860a32072d" border="0"></a>
 
 You can notice, in the last picture, there's a "quartz crystal 12 mhz" nearest the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get midi-comunication and everything will works fine in your DAW or plugin.
