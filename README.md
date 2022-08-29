@@ -1,5 +1,14 @@
+ THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED... HAS BEEN SUSPENDED AND I AM IN ANOTHER MIDI PROJECTS.
+
+You can see all my MIDI devices on my principal web-page or my github repositories.
+
+https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
+
+But i can show you my first device built with an arduino.
+
+
  # Arduino-USB-MIDI-footswitch
- THIS PROJECT WAS MY FIRST DEVICE...IT'S OUTDATED AND HAS BEEN SUSPENDED BY OTHER BETTER USB-MIDI PROJECTS...
+
 
 Build a Pedal-board for use it in your DAW's (cubase,etc..) or VST plugins (like amplitube,guitar rig,etc..).
 
@@ -27,7 +36,7 @@ If you use LEONARDO OR TEENSY, etc.. you will only need to upload one sketch for
 You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 
-# Materials Pedalboard:
+ # Materials Pedalboard:
 
  
 -*Arduino board. (MEGA,UNO,LEONARDO,ETC,ETC...)
@@ -62,7 +71,7 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 -*1 lcd screen (I2C 20x04). 
 
  
-# How to.. build your pedalboard...
+ # How to.. build your pedalboard...
 							  
 -Firstly, Install the required libraries for arduino IDE.  (Control.Surface, encoder,etc.. you will see this in include libraries in my sketch).
 
@@ -72,13 +81,13 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 Or you can use another way to get usb-MIDI comunication using programs like hairless, or loopbe1, etc... 
 
-   ( NOTE: ´Arduino uses usb-serial comunication (CH340G are not the best ones for MIDI..i think..), but you will need the usb-MIDI comunication.  (you need to comunicate with your DAW or plugin).
-   So you can use other pc-programs like hairless,loopbe1,midi-yoke, etc.. for usb-MIDI comunication, but i have prefer the hiduino firmware (pimp my moco lufa, or usb midiklik )
-   Hiduino brings the native USB-MIDI comunication (teensy or leonardo only needs to upload an sketch).
-   So you connect your usb and the device will be recognized as an USB-Midi device.
-   When your arduino it's on usb-Midi comunication will be notice that you can´t upload sketches to your arduino (you will need to come back to serial-usb comunication for being allow to upload sketches).
-   People uses "atmel flip" for the flashing-proccess into hiduino and then reflash into arduino for upload sketches.
-   But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, etc..) )
+   ( NOTE: Arduino uses usb-serial comunication (CH340G are not the best ones for MIDI..i think..), but you   will need the usb-MIDI comunication.  (you need to comunicate with your DAW or plugin).
+    So you can use other pc-programs like hairless,loopbe1,midi-yoke, etc.. for usb-MIDI comunication, but i have prefer the hiduino firmware (pimp my moco lufa, or usb midiklik )
+    Hiduino brings the native USB-MIDI comunication (teensy or leonardo only needs to upload an sketch).
+    So you connect your usb and the device will be recognized as an USB-Midi device.
+    When your arduino it's on usb-Midi comunication will be notice that you can´t upload sketches to your arduino (you will need to come back to serial-usb comunication for being allow to upload sketches).
+    People uses "atmel flip" for the flashing-proccess into hiduino and then reflash into arduino for upload sketches.
+    But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, etc..)   )
 
   I have followed this video in order to get the hiduino/arduino switch.(With my Mega2560).
 
