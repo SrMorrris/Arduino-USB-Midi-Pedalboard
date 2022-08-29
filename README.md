@@ -1,61 +1,65 @@
  # Arduino-USB-MIDI-footswitch
-  THIS PROJECT WAS MY FIRST DEVICE...AND HAS BEEN SUSPENDED BY OTHER BETTER USB-MIDI PROJECTS...
+ THIS PROJECT WAS MY FIRST DEVICE...IT'S OUTDATED AND HAS BEEN SUSPENDED BY OTHER BETTER USB-MIDI PROJECTS...
 
 Build a Pedal-board for use it in your DAW's (cubase,etc..) or VST plugins (like amplitube,guitar rig,etc..).
 
 You can use whatever Arduino board you want..
 
-If you use a MEGA or UNO, the board needs to be flashed, in the Atmega8u2 or the Atmega16u2 chip in order to get
-USB-MIDI comunication. 
+If you use a MEGA or UNO, the board needs to be flashed, in the Atmega8u2 or the Atmega16u2 chip in order to get USB-MIDI comunication. 
 
-If you can't get this type of comunication (because certain boards can't be flashed..like the CH340G boards..) you will need other pc-programs for achieve the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
+be aware that certain boards can't be flashed..like the CH340G boards.., in this cases you will need other pc-programs for achieve the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
+Watch this..
 
 This MEGA board can be flashed into HIDUINO:
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
-
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/RPdg58L/172225-860a32072d.png" alt="172225-860a32072d" border="0"></a>
 
-You can notice there's a quartz crystal 12 mhz near the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need the pc-programs (hairless,loopbe1,etc) in order to get midi-comunication and everything will works fine in your DAW or plugin.
+You can notice there's a "quartz crystal 12 mhz" nearest the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need the pc-programs (hairless,loopbe1,etc) in order to get midi-comunication and everything will works fine in your DAW or plugin.
 
 If you use LEONARDO OR TEENSY, etc.. you will only need to upload one sketch for achieve the MIDI comunication (or adding only one line into your sketch).
 
-Or You can build your own arduino board , with atmel 328 or 1284 chips, etc..
+You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 
-Materials Pedalboard:
+# Materials Pedalboard:
 
  
-  -*Arduino board. (MEGA,UNO,LEONARDO,ETC,ETC...)
+-*Arduino board. (MEGA,UNO,LEONARDO,ETC,ETC...)
   
-  -*One switch SPST (2pin)(ON/OFF): 
+-*One switch SPST (2pin)(ON/OFF): 
 
   This switch it's for change into arduino usb-serial comunication or the hiduino usb-midi comunication . 
   The switch ON/OFF it's connected to 2 pins in the arduino board (the atmel16u2 ICSP). 
 
   ON----Hiduino usb-midi comunication.
+
   OFF---Arduino usb-serial comunication.
 
-  -*23 Buttons (momentary buttons Normally open):
-  (11 buttons will be used for foot-switching) (other buttons are small micro-switches for turn ON/OFF some other features on each pedal) (i have used some small and cheap micro foot switches and arcade buttons for foot-switches and micro-small buttons for the other stuff). You can use whatever momentary button you want.., but normally closed.. you will need to change the sketch).
-	
-  -*2 multiplexers cd74hc4067.  : (the muxes gives more digital or analog outputs for the arduino)
-	
-  -*16 Linear potentiometers 10k.
+-*23 Buttons (momentary buttons Normally open):
 
-  -*24 220 ohms resistors for the leds.
+  11 buttons will be used for foot-switching) (other buttons are small micro-switches for turn ON/OFF some other features on each pedal.
+  
+  I have used some small and cheap micro foot switches and arcade buttons for foot-switches and micro-small buttons for the other stuff. You can use whatever momentary button you want.., but with normally closed.. you will need to change the sketch.
 	
-  -*16 RGB leds (cathode common) (but you can use whatever led-model you want, the better... the cheapest one... but you must think that you will need more than 16 RGB leds.. with single coloured leds you will need 24 leds...).
+-*2 multiplexers cd74hc4067.  : (the muxes gives more digital or analog outputs for the arduino)
+	
+-*16 Linear potentiometers 10k.
 
-	(2 banks with 8 positions each bank, gives 16 leds, and plus... 8 pedal switches, the "just in momento" ones... Total=24 leds) (with the rgb leds you will only need 8 leds, but each led its RGB, so each led got 4 pins...8x4..).
+-*24 220 ohms resistors for the leds.
+	
+-*16 RGB leds (cathode common) 
 
-  -*1 lcd screen (I2C 20x04). 
+ but you can use whatever led-model you want, the better... the cheapest one... but you must think that you will need more than 16 RGB leds.. with single coloured leds you will need 24 leds...
+
+ 2 banks with 8 positions each bank, gives 16 leds, and plus... 8 pedal switches, the "just in momento" ones... Total=24 leds , with the rgb leds you will only need 8 leds, but each led its RGB, so each led got 4 pins...8x4=32..
+
+-*1 lcd screen (I2C 20x04). 
 
  
-
-  HOW TO build your pedalboard...
+# How to.. build your pedalboard...
 							  
 -Firstly, Install the required libraries for arduino IDE.  (Control.Surface, encoder,etc.. you will see this in include libraries in my sketch).
 
@@ -80,8 +84,6 @@ Or you can use another way to get usb-MIDI comunication using programs like hair
 -Upload the sketch "Usb_MIDI_Pedal_board Arduino.ino" into your arduino. That´s it.
 
 
-
-
 -Using multiplexers for more analog and digital outputs on arduino. 
 
 Gives more analog potentiometers and more digital buttons.
@@ -89,33 +91,23 @@ Gives more analog potentiometers and more digital buttons.
 (one multiplexer named mux2 it's for 16 digital outputs and the other multiplexer , named mux3, it's for 16 analog outputs).
 
 -I have used 16 analog potentiometers and 23 digital buttons in my pedalboard.
-
 (you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers minimum).
 
 -Using 8 leds and 8 momentary push button. The leds are showing the pedal-state, if it's on or off .
-
 (8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!).
-
-(so you push the micro foot-switch button and the pedal goes to ON and the led turns to on the green-light).
-
-(and you push it , once more... and the pedal goes to OFF and the led goes to OFF too).
-
+So you push the micro foot-switch button and the pedal goes to ON and the led turns to on the green-light).
+And you push it , once more... and the pedal goes to OFF and the led goes to OFF too).
 So this 8 buttons and 8 leds reflects the real pedal-state on/off ALWAYS!! (and just in the momento).
 
 
-
 So you open a MIDI track and you can "Midi learn" every potentiometer or parameter on the plugin screen.
-
 Moving potentiometer or pressing button, the action will be recorded.
 You must select "All midi inputs" or your arduino pedal board in the midi input, in your DAW.
-
 And select your plugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track selected) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
 
 -Using the other leds (8 leds more..) for showing the bank position.(four leds for show the bankamp position and four leds for show the  bankpedal position).
 
 Bank positions 1-4 are green led coloured and 5-8 are blue led coloured.
-
-
 
 2 banks (named bankamp and bankpedal).8 different position each bank:
 
@@ -138,7 +130,7 @@ You will use two buttons on BANKAMP... one button it's for increment and the oth
 
 
 
-I have quit this project but i have got volume bars for each potentiometer (16 graph-bars)..one volume/wah pedal..one encoder...but i have quited because i have found some other MIDI projects so much better than mine...
+I have quit this project but i have got 16 volume bars for each potentiometer (16 graph-bars)..one volume/wah pedal..one encoder...but i have quited because i have found some other MIDI projects so much better than this one...
 
 
-  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN SUSPENDED BY ANOTHER BETTER USB-MIDI PROJECTS.
+  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS.
