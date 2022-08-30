@@ -1,26 +1,22 @@
- # THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED...NOW I AM INTERESTED ON ANOTHER MIDI PROJECTS.
+ ### THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED...NOW I AM INTERESTED ON ANOTHER MIDI PROJECTS.
 
-The first device it´s not the better..so i have discontinued this project long time ago...
+The first device you built, probably it´s not the best..so i have discontinued this project long time ago...
 
-You can see all my MIDI devices in my principal web-page or in my github repositories.
-(both sites, github and my web, contains everything about my MIDI devices, you can watch or download all files on both sites).Here it's my web :
+You can see all my other MIDI devices in my principal web-page or here, in my github repositories.
+(both sites, github and the web, contains everything about my MIDI devices, you can watch or download all files on both sites).Here it's the web :
 
 https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
 
 But now, i can show you my first device, built with an arduinoMEGA 2560.
 
-Firstly i was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
+Firstly, i was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
 and i was pushed to use a bigger board, an arduino MEGA.
 
 If you want to use an Arduino UNO you will need to change some pins on the code, in order to get a succesful compilation in Arduino IDE (because arduino mega has got much more pins than UNO).
 
-<body>
- <a href="https://ibb.co/SvKP0vP"><img src="https://i.ibb.co/cTN1tT1/pedalera-back-2.png" alt="pedalera-back-2" border="0"></a>
-</body>
-<body>
- <a href="https://ibb.co/N3NRZ72"><img src="https://i.ibb.co/9v4PsGH/pedalboardhacendado.jpg" alt="pedalboardhacendado" border="0"></a>
-</body>
-<body>
+![172305_281f032dea (1)](https://user-images.githubusercontent.com/80991642/187542973-35e040d8-80a5-49ad-86f4-9be6574cfdbf.jpg)
+
+![680718cacd2fbae552cdfb9eaa7da-2677791](https://user-images.githubusercontent.com/80991642/187543032-5acd9038-b861-49cf-99ee-eb981184a066.jpg)
 
  # Arduino-USB-MIDI-footswitch
 
@@ -39,7 +35,8 @@ Watch this..
 This MEGA board can be flashed into HIDUINO:
 
 
- <a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
+![GOOD_ONE specialone](https://user-images.githubusercontent.com/80991642/187542768-761e2a9a-888d-495d-858f-04d92f0e5002.jpg)
+
 
 Maybe you can't watch it in this picture (it's very small, it's next to usb female conector), but there´s a very tiny chip named at16u2 and one ICSP port, attached to this chip.
 
@@ -47,7 +44,7 @@ Maybe you can't watch it in this picture (it's very small, it's next to usb fema
 
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
 
- <a href="https://imgbb.com/"><img src="https://i.ibb.co/RPdg58L/172225-860a32072d.png" alt="172225-860a32072d" border="0"></a>
+![bad one horror inferno](https://user-images.githubusercontent.com/80991642/187542835-87f0bee2-9d14-4733-a547-2bef17d00b21.jpg)
 
 You can notice, in the last picture, the wrong one, there's a "quartz crystal 12 mhz" nearest the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need another  pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get midi-comunication and everything will works fine in your DAW or plugin.
 
@@ -56,7 +53,7 @@ If you use LEONARDO OR TEENSY, ESP32, etc.. you will only need to upload one ske
 You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 
- # Materials Pedalboard:
+ ## Materials Pedalboard:
 
  
 -*Arduino MEGA 2560 board. 
@@ -128,15 +125,15 @@ Gives more analog potentiometers and more digital buttons.
 
 -I have used 16 analog potentiometers and 23 digital buttons in my pedalboard.
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/Xj2LYsz/5device.jpg" alt="5device" border="0"></a>
+![5device](https://user-images.githubusercontent.com/80991642/187542120-98b99f54-b492-4334-b6bf-820c780a9d51.jpg)
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/vJkgkBW/4device.jpg" alt="4device" border="0"></a>
+![4device](https://user-images.githubusercontent.com/80991642/187542100-68c962b5-17a8-4d62-9e4d-8299dec1d4be.jpg)
 
 (you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers, minimum).
 
 -Using 8 leds and 8 momentary push button. 
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/7tqxj4G/1device.jpg" alt="1device" border="0"></a>
+![1device](https://user-images.githubusercontent.com/80991642/187542012-1ccc2f19-bc21-490f-85e6-e05d2184799f.jpg)
 
 The leds are showing the pedal-state, if the pedal it's on or off.
 (8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!)
@@ -154,7 +151,7 @@ You must select "All midi inputs" in the midi track.
 And select your vstplugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track it's selected) (see arrow 1 in picture) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
 
 
-<a href="https://ibb.co/18g0pJV"><img src="https://i.ibb.co/72fSTNc/Sin-nombre.jpg" alt="Sin-nombre" border="0"></a>
+![Sin nombre](https://user-images.githubusercontent.com/80991642/187542268-78b4f9dd-88c4-4e97-b26e-4ea88f854065.jpg)
 
 -Using the other leds (8 leds more..) for showing the bank position.(four leds for showing the bankamp position and four leds for showing the bankpedal position).
 
@@ -178,23 +175,32 @@ Please, notice in the pedalboard picture there are more potentiometers than in t
 *Using i2c lcd screen for showing 8 potentiometers graph-bars , the screen shows the volume bar for 8 potentiometer
 
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/0J6XHsh/3device.jpg" alt="3device" border="0"></a>
+![3device](https://user-images.githubusercontent.com/80991642/187542077-d602aafd-43f5-4f59-9d5e-d002f30b28cf.jpg)
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/WpF8JWQ/2device.jpg" alt="2device" border="0"></a>
+![2device](https://user-images.githubusercontent.com/80991642/187542061-6044089b-30f7-493f-b288-5b356f972b97.jpg)
 
 
 This project was discontinued, I was hard-working this filess...one month updating , and learning, but now it's outdated and will not be more updated.
 
 Finally i have achieved 16 volume bars for each potentiometer (16 graph-bars on screen )..and one volume/wah pedal.. and one encoder... but i have quited because i have found some other MIDI projects so much better than this one...
   
+![pedalera back](https://user-images.githubusercontent.com/80991642/187543544-62a97346-4f9f-42f3-86be-04f425defb05.png)
 
-<a href="https://ibb.co/5kPyVXj"><img src="https://i.ibb.co/Jq94PWp/89acd46afb6c2fd5948952da73e4c-2677791.jpg" alt="89acd46afb6c2fd5948952da73e4c-2677791" border="0"></a>
+![pedalboardhacendado](https://user-images.githubusercontent.com/80991642/187541490-b38e380f-eecb-4de5-9181-6b7aaf9b300b.jpg)
 
-<a href="https://ibb.co/L82FPxC"><img src="https://i.ibb.co/g3B27SD/52be84827d9d241a82dc9d05445f2-2677791.jpg" alt="52be84827d9d241a82dc9d05445f2-2677791" border="0"></a>
+I was thinking to divide devices, pots and foot-switches, not a bad idea..
 
-<a href="https://ibb.co/rsDwcHC"><img src="https://i.ibb.co/M6FCG7Y/81ab08539c8457d08e19ecc0a1996-2677791.jpg" alt="81ab08539c8457d08e19ecc0a1996-2677791" border="0"></a>
+![2dc7787f8098cd69c440e345d286b-2677791](https://user-images.githubusercontent.com/80991642/187540049-8d2fd769-ba69-47c0-8ea9-492ced96c1d9.jpg)
 
-  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. 
+![52be84827d9d241a82dc9d05445f2-2677791](https://user-images.githubusercontent.com/80991642/187540708-b34fd662-c5eb-41f5-a447-045990b67094.jpg)
+
+![89acd46afb6c2fd5948952da73e4c-2677791](https://user-images.githubusercontent.com/80991642/187541009-99392831-707b-442f-98e2-9918aeae2875.jpg)
+
+![81ab08539c8457d08e19ecc0a1996-2677791](https://user-images.githubusercontent.com/80991642/187540957-288d2454-f7fc-4b7b-b70f-db394c749a85.jpg)
+
+
+## THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. 
+
   Discussions, problems or recomendations will be attended
 
   ELIAS BARBERO CANO. 30 August 2022. Aragón. Open source.

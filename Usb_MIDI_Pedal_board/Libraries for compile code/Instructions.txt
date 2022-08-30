@@ -1,5 +1,7 @@
 In Arduino IDE..
--PRESS PROGRAM -Include library 
+
+-PRESS PROGRAM 
+-Include library 
 -Select "add zip"
 
 and you have to select every zip file here, one library, each time..
