@@ -3,48 +3,24 @@
 The first device it´s not the better..so i have discontinued this project long time ago...
 
 You can see all my MIDI devices in my principal web-page or in my github repositories.
-(both sites contains everything about my MIDI devices)
+(both sites, github and my web, contains everything about my MIDI devices, you can watch or download all files on both sites).Here it's my web :
 
 https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
 
 But now, i can show you my first device, built with an arduinoMEGA 2560.
 
-I was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
-and i was pushed to use a bigger board, arduino MEGA.
+Firstly i was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
+and i was pushed to use a bigger board, an arduino MEGA.
 
-If you want to use an Arduino UNO you will need to change some pins on the code, in order to get a succesful compilation in IDE (cause arduino mega got much more pins than UNO).
+If you want to use an Arduino UNO you will need to change some pins on the code, in order to get a succesful compilation in Arduino IDE (because arduino mega has got much more pins than UNO).
 
-
-
-
-
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/VgTRbRQ/spaincid.png" alt="spaincid" border="0"></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/fNmmLCJ/172305-281f032dea-1.png" alt="172305-281f032dea-1" border="0"></a>
-
+<body>
+ <a href="https://ibb.co/SvKP0vP"><img src="https://i.ibb.co/cTN1tT1/pedalera-back-2.png" alt="pedalera-back-2" border="0"></a>
+</body>
+<body>
+ <a href="https://ibb.co/N3NRZ72"><img src="https://i.ibb.co/9v4PsGH/pedalboardhacendado.jpg" alt="pedalboardhacendado" border="0"></a>
+</body>
+<body>
 
  # Arduino-USB-MIDI-footswitch
 
@@ -63,7 +39,7 @@ Watch this..
 This MEGA board can be flashed into HIDUINO:
 
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/wpT36hC/172224-860a32072d.png" alt="172224-860a32072d" border="0"></a>
 
 Maybe you can't watch it in this picture (it's very small, it's next to usb female conector), but there´s a very tiny chip named at16u2 and one ICSP port, attached to this chip.
 
@@ -71,7 +47,7 @@ Maybe you can't watch it in this picture (it's very small, it's next to usb fema
 
 This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 usb-chip):
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/RPdg58L/172225-860a32072d.png" alt="172225-860a32072d" border="0"></a>
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/RPdg58L/172225-860a32072d.png" alt="172225-860a32072d" border="0"></a>
 
 You can notice, in the last picture, the wrong one, there's a "quartz crystal 12 mhz" nearest the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need another  pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get midi-comunication and everything will works fine in your DAW or plugin.
 
@@ -106,7 +82,7 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 -*24 220 ohms resistors for the leds.
 	
--*16 RGB leds (cathode common) 
+-*16 RGB leds (cathode common). 
 
    NOTE: but you can use whatever led-model you want, the better... the cheapest one... but you must think that you will need more than 16 RGB leds.. with single coloured leds you will need 24 leds...
 
@@ -165,38 +141,38 @@ Gives more analog potentiometers and more digital buttons.
 The leds are showing the pedal-state, if the pedal it's on or off.
 (8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!)
 
-So you push the micro foot-switch button and the pedal goes to ON and the led turns to on the green-light).
-And you push it , once more... and the pedal goes to OFF and the led goes to OFF too).
-So this 8 buttons and 8 leds reflects the real pedal-state on/off ALWAYS!! (and just in the momento).
+So you push the micro foot-switch button and the pedal goes to ON and the led turns on the green-light.
+And you push it , once more... and the pedal goes to OFF and the led goes to OFF too.
+So this 8 buttons and their 8 leds reflects the real pedal-state on/off ALWAYS!! (and just in the momento).
 
 
-So you open a MIDI track in your DAW or execute standalone plugin and you can "Midi learn" every potentiometer or parameter on the plugin screen.
 
-Moving potentiometer or pressing the buttons, the action will be recorded.
+So you open a MIDI track in your DAW or execute standalone plugin and you can (right click) "Midi learn" every potentiometer or parameter on the vst-plugin screen.
+
+Moving potentiometer or pressing the button, the action will be recorded.
 You must select "All midi inputs" in the midi track.
-And select your plugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track selected) (see arrow 2 in picture) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
+And select your vstplugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track it's selected) (see arrow 1 in picture) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
+
 
 <a href="https://ibb.co/18g0pJV"><img src="https://i.ibb.co/72fSTNc/Sin-nombre.jpg" alt="Sin-nombre" border="0"></a>
 
--Using the other leds (8 leds more..) for showing the bank position.(four leds for show the bankamp position and four leds for show the  bankpedal position).
+-Using the other leds (8 leds more..) for showing the bank position.(four leds for showing the bankamp position and four leds for showing the bankpedal position).
 
-Bank positions 1-4 are green led coloured and 5-8 are blue led coloured.
+Bank positions 1-4 are green led coloured, and bank positions 5-8 are blue led coloured.
 
-2 banks (named bankamp and bankpedal).8 different position each bank:
-
-
-
-**-(Bankpedal=8 pedals available and 4 potentiometer on each pedal) 
-You will use two buttons on BANKPEDAL.. one button it's for increment and the other one it's for decrement the bank position on bankpedal.
-(8 pedals and 4 pots each pedal).(and here you got another one extra button for turn ON/OFF the pedal effect).
+-2 banks (named bankamp and bankpedal).8 different positions on each bank:
 
 
+** - (Bankpedal= 8 pedals available and 4 potentiometers on each pedal) 
+You will use two buttons on BANKPEDAL.. one button it's for increment and the other one it's for decrement the bank position on bankpedal.(see picture, 2 black buttons)
+(8 pedals and 4 pots each pedal).(and here you got another one extra button, the red one button,  for turn ON/OFF the pedal effect where you are).
 
-**-(bankamp=8 different positions for control amps or racks, 4 potentiometer available on each bank).
-You will use two buttons on BANKAMP... one button it's for increment and the other it's one for decrement the bank position on bankamp.
+
+** - (bankamp= 8 different positions for control amps or racks, 4 potentiometers available on each bank).
+You will use two buttons on BANKAMP... one button it's for increment and the other one it's one for decrement the bank position on bankamp.
 (8 amps or racks and 4 pots each amp or rack).
 
-
+Please, notice in the pedalboard picture there are more potentiometers than in the code (4 potentiometer works better than 8 ).
 
 
 *Using i2c lcd screen for showing 8 potentiometers graph-bars , the screen shows the volume bar for 8 potentiometer
@@ -207,11 +183,18 @@ You will use two buttons on BANKAMP... one button it's for increment and the oth
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/WpF8JWQ/2device.jpg" alt="2device" border="0"></a>
 
 
-This project was discontinued, I was during one month updating and changing everything, learning.
+This project was discontinued, I was hard-working this filess...one month updating , and learning, but now it's outdated and will not be more updated.
 
 Finally i have achieved 16 volume bars for each potentiometer (16 graph-bars on screen )..and one volume/wah pedal.. and one encoder... but i have quited because i have found some other MIDI projects so much better than this one...
+  
 
+<a href="https://ibb.co/5kPyVXj"><img src="https://i.ibb.co/Jq94PWp/89acd46afb6c2fd5948952da73e4c-2677791.jpg" alt="89acd46afb6c2fd5948952da73e4c-2677791" border="0"></a>
 
-  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. But you can ask me about it whatever you want it..
+<a href="https://ibb.co/L82FPxC"><img src="https://i.ibb.co/g3B27SD/52be84827d9d241a82dc9d05445f2-2677791.jpg" alt="52be84827d9d241a82dc9d05445f2-2677791" border="0"></a>
+
+<a href="https://ibb.co/rsDwcHC"><img src="https://i.ibb.co/M6FCG7Y/81ab08539c8457d08e19ecc0a1996-2677791.jpg" alt="81ab08539c8457d08e19ecc0a1996-2677791" border="0"></a>
+
+  THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. 
+  Discussions, problems or recomendations will be attended
 
   ELIAS BARBERO CANO. 30 August 2022. Aragón. Open source.
