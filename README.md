@@ -14,7 +14,33 @@ and i was pushed to use a bigger board, arduino MEGA.
 
 If you want to use an Arduino UNO you will need to change some pins on the code, in order to get a succesful compilation in IDE (cause arduino mega got much more pins than UNO).
 
+
+
+
+
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/VgTRbRQ/spaincid.png" alt="spaincid" border="0"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/fNmmLCJ/172305-281f032dea-1.png" alt="172305-281f032dea-1" border="0"></a>
