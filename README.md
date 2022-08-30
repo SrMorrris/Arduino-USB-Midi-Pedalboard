@@ -1,4 +1,6 @@
- THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED... HAS BEEN SUSPENDED AND I AM IN ANOTHER MIDI PROJECTS.
+ # THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED...NOW I AM INTERESTED ON ANOTHER MIDI PROJECTS.
+
+I don´t think i will be update this files...anymore..
 
 You can see all my MIDI devices on my principal web-page or my github repositories.
 
@@ -115,27 +117,41 @@ Gives more analog potentiometers and more digital buttons.
 
 -I have used 16 analog potentiometers and 23 digital buttons in my pedalboard.
 
-(you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers minimum).
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Xj2LYsz/5device.jpg" alt="5device" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/vJkgkBW/4device.jpg" alt="4device" border="0"></a>
+
+(you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers, minimum).
 
 -Using 8 leds and 8 momentary push button. 
 
-The leds are showing the pedal-state, if it's on or off .
-(8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!).
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/7tqxj4G/1device.jpg" alt="1device" border="0"></a>
+
+The leds are showing the pedal-state, if the pedal it's on or off.
+
+(8 pedals are available for control ON/OFF JUST IN THE MOMENTO!!!)
+
 So you push the micro foot-switch button and the pedal goes to ON and the led turns to on the green-light).
+
 And you push it , once more... and the pedal goes to OFF and the led goes to OFF too).
+
 So this 8 buttons and 8 leds reflects the real pedal-state on/off ALWAYS!! (and just in the momento).
 
 
-So you open a MIDI track and you can "Midi learn" every potentiometer or parameter on the plugin screen.
-Moving potentiometer or pressing button, the action will be recorded.
-You must select "All midi inputs" or your arduino pedal board in the midi input, in your DAW.
-And select your plugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track selected) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
+So you open a MIDI track in your DAW or execute standalone plugin and you can "Midi learn" every potentiometer or parameter on the plugin screen.
+
+Moving potentiometer or pressing the buttons, the action will be recorded.
+You must select "All midi inputs" in the midi track.
+And select your plugin at midi output , please be sure to enable monitor in this midi track and the midi track it's selected (left click mouse and track selected) (see arrow 2 in picture) when you use the midi controller..., in order to get everything working fine, this happens with every midi controller on market...
+
+<a href="https://ibb.co/18g0pJV"><img src="https://i.ibb.co/72fSTNc/Sin-nombre.jpg" alt="Sin-nombre" border="0"></a>
 
 -Using the other leds (8 leds more..) for showing the bank position.(four leds for show the bankamp position and four leds for show the  bankpedal position).
 
 Bank positions 1-4 are green led coloured and 5-8 are blue led coloured.
 
 2 banks (named bankamp and bankpedal).8 different position each bank:
+
 
 
 **-(Bankpedal=8 pedals available and 4 potentiometer on each pedal) 
@@ -154,9 +170,12 @@ You will use two buttons on BANKAMP... one button it's for increment and the oth
 *Using i2c lcd screen for showing 8 potentiometers graph-bars , the screen shows the volume bar for 8 potentiometer
 
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/0J6XHsh/3device.jpg" alt="3device" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/WpF8JWQ/2device.jpg" alt="2device" border="0"></a>
 
 
-I have quit of this project but i have achieved 16 volume bars for each potentiometer (16 graph-bars on screen )..one volume/wah pedal.. one encoder... but i have quited because i have found some other MIDI projects so much better than this one...
+I have quit of this project, i have been updated every day during one month and i have achieved 16 volume bars for each potentiometer (16 graph-bars on screen )..one volume/wah pedal.. one encoder... but i have quited because i have found some other MIDI projects so much better than this one...
 
 
   THIS PROJECT WAS MY FIRST DEVICE...HAS BEEN OUTDATED BY ANOTHER USB-MIDI PROJECTS. But you can ask me about it..
