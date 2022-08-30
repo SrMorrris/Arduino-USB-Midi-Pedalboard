@@ -1,44 +1,62 @@
  ### THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUTDATED...NOW I AM INTERESTED ON ANOTHER MIDI PROJECTS.
 
-The first device you built, probably it´s not the best..so i have discontinued this project long time ago...
+The first device you built, probably it´s not the best.. so i have discontinued this project a long time ago.
 
-You can see all my other MIDI devices in my principal web-page or here, in my github repositories.
-(both sites, github and the web, contains everything about my MIDI devices, you can watch or download all files on both sites).Here it's the web :
+You can see every MIDI devices i have built, in my principal web-page or here, in my github repositories.
+Both sites, github and the web, contains everything about my MIDI devices, you can watch or download all files on both sites. 
+Here it's the web :
 
 https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
 
-But now, i can show you my first device, built with an arduinoMEGA 2560.
+But i can show you the first device i have made, with an arduinoMEGA 2560.
 
 Firstly, i was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
 and i was pushed to use a bigger board, an arduino MEGA.
 
 If you want to use an Arduino UNO you will need to change some pins on the code, in order to get a succesful compilation in Arduino IDE (because arduino mega has got much more pins than UNO).
 
+This it´s the pedal-board i have built with this code:
+
 ![172305_281f032dea (1)](https://user-images.githubusercontent.com/80991642/187542973-35e040d8-80a5-49ad-86f4-9be6574cfdbf.jpg)
 
+And the next days the project has changed to potentiometers in one USB-MIDI-controller-desktop-device (pots, encoder and some small buttons). I have made so many changes in my first device :D
+
 ![680718cacd2fbae552cdfb9eaa7da-2677791](https://user-images.githubusercontent.com/80991642/187543032-5acd9038-b861-49cf-99ee-eb981184a066.jpg)
+
+But, in these days, i have found the Ignotus666 Midi controller and my project goes to OFF..
+
+https://github.com/ignotus666/Bluetooth-Pedalboard
+
+https://github.com/ignotus666/desktop-midi-controller
+
+
+See the next video and you will be notice the little implementation and why i have decided to retire from my first project.. (ws2812rgb, ili9341, etc..) Ignotus666 controller it's simply awesome!! (i will show you how i have built mine..don't worry).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EoB76IpAQk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  # Arduino-USB-MIDI-footswitch
 
 
-Build a Pedal-board with Arduino MEGA for use it in your DAW's (cubase,etc..) or VST plugins (like amplitube,guitar rig,etc..).
+You can build your Pedal-board with Arduino MEGA for use it in your DAW's (cubase,etc..) or VST plugins (like amplitube,guitar rig,etc..).Controlling all parameters via MIDI.
 
 You can use whatever Arduino board you want..
 
 If you use a MEGA or UNO, the board needs to be flashed, in the Atmega8u2 or the Atmega16u2 chip in order to get USB-MIDI comunication. 
+
+![atmelchips](https://user-images.githubusercontent.com/80991642/187557061-b7158547-1eda-429c-af1a-1262c93e5ed6.jpg)
 
 Be aware that certain boards can't be flashed..like the CH340G boards.., in this cases you will need another pc-programs in order to get the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
 
 Watch this..
 
 
-This MEGA board can be flashed into HIDUINO:
+This MEGA board can be flashed into HIDUINO (and the picture before, MEGA and UNO, can be flashed too):
 
 
 ![GOOD_ONE specialone](https://user-images.githubusercontent.com/80991642/187542768-761e2a9a-888d-495d-858f-04d92f0e5002.jpg)
 
 
-Maybe you can't watch it in this picture (it's very small, it's next to usb female conector), but there´s a very tiny chip named at16u2 and one ICSP port, attached to this chip.
+Maybe you can't watch it in the pictures , it's a very small chip, it's near to the usb-female conector), but there it's a very tiny chip named at16u2 and one ICSP port, attached to this chip.
 
 
 
@@ -46,11 +64,11 @@ This MEGA board can't be flashed into HIDUINO (CH340Gchip, there's no atmel16u2 
 
 ![bad one horror inferno](https://user-images.githubusercontent.com/80991642/187542835-87f0bee2-9d14-4733-a547-2bef17d00b21.jpg)
 
-You can notice, in the last picture, the wrong one, there's a "quartz crystal 12 mhz" nearest the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need another  pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get midi-comunication and everything will works fine in your DAW or plugin.
+You can notice, in the last picture, the wrong one, there it's a "quartz crystal 12 mhz" next to the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed...you will need another  pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get usb-midi-comunication and everything will works fine in your DAW or plugin.
 
-If you use LEONARDO OR TEENSY, ESP32, etc.. you will only need to upload one sketch for achieve the MIDI comunication (only adding one line into your sketch).
+If you use other boards like LEONARDO OR TEENSY, ESP32, etc.. you will only need to upload one sketch for achieve the USB-MIDI comunication (You have only to add one line or include a library into your sketch).
 
-You can build your own arduino board , with atmel 328 or 1284 chips, etc..
+Or maybe you prefer to build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 
  ## Materials Pedalboard:
@@ -58,28 +76,40 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
  
 -*Arduino MEGA 2560 board. 
   
--*One switch SPST (2pin)(ON/OFF): 
+-*One switch SPST (2pin)(ON/OFF): (you can use one more switch in +5V USB for ON/OFF the device if you want)
 
-  This switch it's for change into arduino usb-serial comunication or the hiduino usb-midi comunication . 
-  The switch ON/OFF it's connected to 2 pins in the arduino board (the atmel16u2 ICSP). 
+![41Xfrd3VpWL _AC_SY355_](https://user-images.githubusercontent.com/80991642/187557725-ca4ee3d6-ff5c-49f3-8abe-6461d8935a19.jpg)
+
+  This switch it's used for change into "arduino usb-serial comunication" or the "hiduino usb-midi comunication". 
+
+  The switch it's connected to 2 pins in the arduino board (the atmel16u2 ICSP) (see the you-tube video at the bottom of this page). 
 
   ON----Hiduino usb-midi comunication.
 
   OFF---Arduino usb-serial comunication.
 
--*23 Buttons (momentary buttons Normally open):
+-*23 Buttons (momentary buttons, Normally open):
+
 
   11 buttons will be used for foot-switching) (other buttons are small micro-switches for turn ON/OFF some other features on each pedal.
   
-  I have used some small and cheap micro foot switches and arcade buttons for foot-switches and micro-small buttons for the other stuff. You can use whatever momentary button you want.., but with normally closed.. you will need to change the sketch.
+  I have used some small and cheap micro foot switches and arcade buttons for foot-switches and micro-small buttons for the other stuff. You can use whatever momentary button you want.., but with normally closed.. you will need to change some lines in the sketch.
 	
--*2 multiplexers cd74hc4067.  : (the muxes gives more digital or analog outputs for the arduino)
-	
+-*2 multiplexers cd74hc4067.  : 
+
+![MULTIPLEXOR](https://user-images.githubusercontent.com/80991642/187559132-0e077a11-f252-428f-9763-c7b7880a0eec.jpg)
+
+
 -*16 Linear potentiometers 10k.
+
+![41Q1lTVhGnL](https://user-images.githubusercontent.com/80991642/187558812-f31d6e01-e0d3-437d-837a-ac8aabf636e3.jpg)
+
 
 -*24 220 ohms resistors for the leds.
 	
 -*16 RGB leds (cathode common). 
+
+![RGB LED](https://user-images.githubusercontent.com/80991642/187558454-0fbac7f9-6cd7-4060-8362-ea37b885d07a.jpg)
 
    NOTE: but you can use whatever led-model you want, the better... the cheapest one... but you must think that you will need more than 16 RGB leds.. with single coloured leds you will need 24 leds...
 
@@ -87,41 +117,43 @@ You can build your own arduino board , with atmel 328 or 1284 chips, etc..
 
 -*1 lcd screen (I2C 20x04) 4PINS:+5V;GND;SCK;SDA. 
 
+
  
  # How to.. build your pedalboard...
 							  
--Firstly, yOU HAVE TO Install the required libraries for arduino IDE.  (Control.Surface, encoder,etc.. you will see instructions for install the libraries in my file).
+-Firstly, you have to install Arduino IDE and the required libraries for arduino IDE.  (Control.Surface, encoder, etc.. you will see detailed instructions for installation required libraries in my files).
 
--Install Hiduino firmware (in order to get usb-midi communication). 
+-Install Hiduino firmware (in order to get usb-midi communication). (see youtube video here)
 
-(REM: ARDUINO UNO or MEGA needs to be flashed into USB-MIDI).
+(REMember: ARDUINO UNO or MEGA boards needs to be flashed in order to get USB-MIDI comunication).
 
-Or you can use another way to get usb-MIDI comunication using programs like hairless, or loopbe1, etc... 
+Or you can use another way to get usb-MIDI comunication using programs in your pc, like hairless, or loopbe1, etc... 
 
-    NOTE: Arduino uses usb-serial comunication (CH340G are not the best ones for MIDI..i think..), but you    will need the usb-MIDI comunication.  (you need to comunicate with your DAW or plugin).
-    So you can use other pc-programs like hairless,loopbe1,midi-yoke, etc.. for usb-MIDI comunication, but i have prefer the hiduino firmware (pimp my moco lufa, or usb midiklik).
-    Hiduino brings the native USB-MIDI comunication (REM: teensy or leonardo, etc.. only needs to upload an sketch).
+    NOTE: Arduino uses usb-serial comunication (CH340G boards are not the best ones for MIDI..i think..), but you  will need the usb-MIDI comunication.  (you will need to comunicate with your DAW or plugin).
+    So you can use other pc-programs like hairless,loopbe1,midi-yoke, etc.. for the usb-MIDI comunication, but i have prefer the hiduino firmware (pimp my moco lufa, or usb midiklik).
+    Hiduino brings the native USB-MIDI comunication (REMember: teensy or leonardo, etc.. only needs to upload an sketch).
     So you connect your usb and the device will be recognized as an USB-Midi device.
-    When your arduino it's usb-Midi comunication mode , you will be notice that you can´t upload sketches to your arduino (you will need to come-back to serial-usb comunication for being allow to upload sketches).
+    When your arduino it's on usb-Midi comunication mode , you can´t upload sketches to your arduino (you will need to come-back to serial-usb comunication for being allow to upload sketches).
     People uses "atmel flip" for the flashing-proccess into hiduino and then reflash into arduino for upload sketches.
-    But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, etc..).You don´t need Atmel Flip anymore after installation.   
+    But you can implement a switch for change into hiduino or arduino state (midi or serial) (see tutorials about hiduino or pimpmymocolufa, usb midiklik etc..). You don´t need Atmel Flip anymore after installation.   
 
-  I have followed this video in order to get the hiduino/arduino switch.And the USB-MIDI Comunication
+  I have followed this video in order to get the hiduino/arduino switch. And the USB-MIDI Comunication:
 
-  https://www.youtube.com/watch?v=ITJnWoss8xE&ab_channel=DanielMarcial
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ITJnWoss8xE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
--Upload the sketch "Usb_MIDI_Pedal_board Arduino.ino" into your arduino. That´s it.FINISHED!!
+-Upload the sketch "Usb_MIDI_Pedal_board Arduino.ino" included in my files, into your arduino. And That´s it!!. 
+
+FINISHED!!
 
  # How it works..
 
 
--Using multiplexers for more analog and digital outputs in the arduino...
+-Using CD74HC4067 multiplexers for having more analog and digital outputs in the arduino board...
 
 Gives more analog potentiometers and more digital buttons.
-(but you can skip this option if you are happy with your digital/analog outputs in your arduino). 
-
-(one multiplexer named mux2 it's for 16 digital outputs and the other multiplexer , named mux3, it's for 16 analog outputs).
+(but you can skip this option if you are happy with the amount of your digital/analog outputs in your arduino). 
+(In the code, one multiplexer named mux2 it's for 16 digital outputs and the other multiplexer , named mux3, it's for 16 analog outputs).
 
 -I have used 16 analog potentiometers and 23 digital buttons in my pedalboard.
 
@@ -129,7 +161,7 @@ Gives more analog potentiometers and more digital buttons.
 
 ![4device](https://user-images.githubusercontent.com/80991642/187542100-68c962b5-17a8-4d62-9e4d-8299dec1d4be.jpg)
 
-(you can use whatever you want.. but i recommend 15 buttons and 8 potentiometers, minimum).
+(you can use whatever amount you want.. but i recommend 15 buttons and 8 potentiometers, at least).
 
 -Using 8 leds and 8 momentary push button. 
 
