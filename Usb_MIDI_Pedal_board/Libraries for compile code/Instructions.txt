@@ -1,0 +1,16 @@
+In Arduino IDE..
+-PRESS PROGRAM -Include library 
+-Select "add zip"
+
+and you have to select every zip file here, one library, each time..
+
+When you finished installation 3 libraries, you have to search for this libraries on IDE:
+-tools---"admin.library"
+
+#include <AnalogMultiButton.h>                                   Search for this library in iDE (author:damien clarke)
+#include <LcdBarGraphX.h>                                        search for this library in ide (author:balazs kelemen)
+#include <Encoder.h>                                             search for encoder library (author:paul stoffregen)
+#include <AH/Hardware/ExtendedInputOutput/AnalogMultiplex.hpp>   maybe you don't require installation
+#include <LiquidMenu.h>                                          search for this library on ide and install it (author vasil kalchev)
+#include <hd44780.h>                                             search for this library on ide and install it (author:bill perry)
+                                          
