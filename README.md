@@ -1,43 +1,45 @@
- ### THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUT-DATED one year ago...Now i am interested in another projects.
+ ### THIS PROJECT WAS MY FIRST DEVICE...AND IT'S OUT-DATED since one year ago...Now i am interested in another MIDI projects.
 
 ## Little history of my first MIDI device with arduino
 
-The first device it's not probably the best, so i have discontinued this project long time ago.
+The first device it's not probably the best, so i have discontinued this project a long time ago.
 
-You can see every MIDI devices i have built, in my principal web-page or here, in my github repositories.
+You can see every MIDI devices i have built, in my web or here, in my github repositories.
 
-Both sites, github and the web, contains everything about my MIDI devices, you can watch or download all files on both sites. 
+Both sites, github and web, contains absolutely everything about my MIDI devices, you can watch or download all files on both sites. 
+You will find 3 different Midi controllers. Here, in this chapter, it's the first controller i have built.
 
-Here it's the web :
+And here it's the web :
 
 https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
 
-But i can show you the first device i have made, with an arduinoMEGA 2560.
+But by now i can show you the first device i have made, with an arduinoMEGA 2560 board.
 
-On early days i was started with Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
+On early days i was started with an Arduino UNO, but the project growed, and growed.. gettin' bigger and bigger..
 and i was pushed to use a bigger board, an arduino MEGA.
 
-If you want to use an Arduino UNO you will need to change some lines in the .ino, in order to get a succesful compilation in Arduino IDE (because arduino mega has got much more pins than UNO).
+If you want to use an Arduino UNO you will need to change some lines in the arduino sketch (.ino), in order to get a succesful compilation in Arduino IDE (because arduino mega has got much more pins than UNO).
 
-This it´s the pedal-board i have built with this code:
+Here you can see the pedal-board i have built with this code:
 
 ![172305_281f032dea (1)](https://user-images.githubusercontent.com/80991642/187542973-35e040d8-80a5-49ad-86f4-9be6574cfdbf.jpg)
 
-And the next days.. the project moved to one USB-MIDI-controller-desktop-device (pots, encoder and some small buttons). 
+And the next days.. the project changed to "one USB-MIDI-controller-desktop-device" (pots, encoder and some small buttons). And the pedalboard on other device...
 
-I have made so many changes in my first device :D
+I have made so many changes in this controller (was my first) :D
 
 ![680718cacd2fbae552cdfb9eaa7da-2677791](https://user-images.githubusercontent.com/80991642/187591438-45e6adf0-d294-4c52-b88d-f2eb27e02741.jpg)
 
-But, finally i find the "Ignotus666 Midi-controller" and my project goes OUT..
+But, at the end, i find the "Ignotus666 Midi-controller" and my project goes OUT..K-PUT..BYE-BYE..Sayonara baby
 
+Here it´s the midi controller i have found on these days (ignotus666):
 https://github.com/ignotus666/Bluetooth-Pedalboard
 
 https://github.com/ignotus666/desktop-midi-controller
 
-Watch the next video and you will see the little improvement, and why i have decided to retire from my first project..  
+Watch the next video and you will see the little improvement for me, and why i have decided to retire from my first project..  
 
-Ignotus666 controller it's simply awesome!! (ws2812b LEDS, ili9341 LCD-SCREEN, etc..) 
+Ignotus666 controller it's simply awesome!! (ws2812b LEDS, ili9341 LCD-SCREEN, etc..) it's my best MIDI controller.
 
 (i will show you how i have made mine..don't worry..). Here you can see the video:
 
@@ -53,30 +55,30 @@ Controlling all parameters via MIDI.
 
 You can use whatever Arduino board you want..
 
-If you use a MEGA or UNO, this boards needs to be flashed, in the Atmel8u2 or the Atmel16u2 chip, in order to get the USB-MIDI comunication (this boards can be flashed) :
+If you use a MEGA or UNO, this boards needs to be flashed, in the Atmel8u2 or the Atmel16u2 chip, in order to get the USB-MIDI comunication (the boards in the picture.., can be flashed both) :
 
 ![atmelchips](https://user-images.githubusercontent.com/80991642/187557061-b7158547-1eda-429c-af1a-1262c93e5ed6.jpg)
 
-Be aware that certain kind of boards can't be flashed..like the CH340G boards.., in this cases you will need another pc-programs in order to get the MIDI comunication (this programs are hairless, loopbe1, midiyoke, etc..).
+Be aware that certain kind of boards can't be flashed..like the CH340G boards.., in this cases you will need another pc-programs in order to get the MIDI comunication (this pc-programs are hairless, loopbe1, midiyoke, etc..).
 
 
-- This MEGA board can be flashed into HIDUINO :
+- This MEGA board can be flashed into HIDUINO,too :
 
 
 ![GOOD_ONE specialone](https://user-images.githubusercontent.com/80991642/187542768-761e2a9a-888d-495d-858f-04d92f0e5002.jpg)
 
 
-Maybe you can't watch it in this pictures , because it's a very small chip, it's near to the usb-female conector, but there it's a very small chip and one ICSP port, attached to this chip.
+Maybe you barely watch it in this pictures , because it's a very small and tiny chip, it's near or closer to the usb-female conector, but there's a very small chip and one ICSP port, attached to this chip.
 
 
-- This MEGA board can't be flashed into HIDUINO (CH340G chip, here there's no atmel16u2 usb-chip):
+- This MEGA board can't be flashed into HIDUINO (CH340G chip, there's no atmel16u2/atmel8u2 usb-chip):
 
 ![bad one horror inferno](https://user-images.githubusercontent.com/80991642/187542835-87f0bee2-9d14-4733-a547-2bef17d00b21.jpg)
 
 This it's the wrong one (for hiduino), there it's a "quartz crystal 12 mhz" next to the CH340G chip.. maybe the atmel 2560 chip it's a good one.. but this board can't be flashed into hiduino...you will need another  pc-programs (like hairless,loopbe1, midi-yoke, etc..) in order to get usb-midi-comunication and everything will works fine in your DAW or plugin.
 
-If you use other boards like LEONARDO OR TEENSY, ESP32, etc.. you will only need to upload one sketch for achieve the USB-MIDI comunication. 
-(You have only to add one line or include a library into your sketch).
+If you use another boards like Arduino Leonardo or Teensy,Arduino pro-micro, etc.. you don't need to flash your board, you will only need to upload one sketch for achieve the USB-MIDI comunication. 
+(You only have to add one line or include a library into your sketch, and that`s it).
 
 Or maybe you prefer to build your own arduino board , with atmel 328 or 1284 chips, etc..
 

@@ -1,39 +1,37 @@
-/****************************************************************************************************
- ********************         USB MIDI FOOTSWITCH         *********************************************************
- *********************          ARDUINOMEGA2560         ***********************************************************
- **********************         CONTROL.SURFACE       **************************************************************
- *********************************************************************************************************       
-                    Install libraries... Control.Surface library.  
-                    NewLiquidCrystal .LcdBarGraphx . Encoder..etc.etc.etc...    
- ***************************************************************************************************************
- * In order to declare arduino as usbMIDI interface, first you will need  to flash 
- * your arduino and convert it into hiduino , or you can use other programs  
- * like "loopbe1" or "hairless"....in order to use usbmidi comunication 
- * and not the serial comunication on your arduino. See control.surface docu for declare 
- * other interfaces. 
- *****************************************************************************************************************
- **************************************************************************************************************
- ******************************************************************************************************************
- ******** For "La pedalera del tio Elias" Arduino Usb-Midi MultiBank Pedal-Board Super-footswith.*********************************
- ********************             You will need:               ************************************************
- ****************************************************************************************************************** 
+/************************************************************************************************************
+ ********************         USB MIDI FOOTSWITCH         ***************************************************
+ *********************          ARDUINOMEGA2560         *****************************************************
+ **********************         CONTROL.SURFACE       *******************************************************
+ ************* https://github.com/SrMorrris/Arduino-USB-Midi-Pedalboard *************************************
+ ************* https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-1DEV/      *************************************
+ ************************************************************************************************************       
+               Install libraries... Control.Surface library.  
+               NewLiquidCrystal .LcdBarGraphx . Encoder..etc.etc.etc...   
+               You will see orange words (include library) when installation it's correct. 
+ *************************************************************************************************************
+ *************************************************************************************************************
+ *************************************************************************************************************
+ *************************************************************************************************************
+ ******** "La pedalera del tio Elias" Arduino Usb-Midi MultiBank Pedal-Board Super-footswith.*****************
+ *************************************************************************************************************
+ *************************************************************************************************************
  **      -   An arduino board (Mega2560 it's the perfect model for me).
- ******************************************************************************************************************  
+ *************************************************************************************************************
  *****   -   2 CD74HC4067 multiplexers (perfect for bring more inputs..)
  *           i don´t recommend using outputs on multiplexer...but it´s perfect for 
  *           INPUTS. You can declare the multiplexer as digital or analog multiplexer).
  *           For output you can use shift registers,
- ************************************************************************************************************************      
+ *************************************************************************************************************      
  *****   -   16 Lineal Potentiometers 10k.
- ********************************************************************************************************************
+ *************************************************************************************************************
  ****    -   21 Buttons (momentar,microswitch, normally closed,pushbutton.etc..)
- ******************************************************************************************************************* 
+ *************************************************************************************************************
  *****   -   Encoder.        
- * *******************************************************************************************************************
+ * ***********************************************************************************************************
  *****   -   Lcd 20x04 I2C screen (i recommend oled 1306 or another SPI screen).
- ****************************************************************************************************************** **************** 
+ *************************************************************************************************************
  *****   -   16 RGB cathode leds (cathode means all leds connected to ground). 
- ****************************************************************************************************************************   
+ *************************************************************************************************************
  *****   -   You can use switches for turning back arduino into serial comunication 
  *              and you will be able to upload sketches...turning off the switch 
  *              you will come back to hiduino and the arduino´s usb-midi comunication.
@@ -41,28 +39,35 @@
  *              and cheapest wire i have found on aliexpress but ensure you connect everything 
  *              fine and  correct (not excesive voltage loose on circuit) because bad  
  *              connections will  cause interferences.
- ****************************************************************************************************              
- ****************************************CONFIGURE****************************************************             
+ **************************************************************************************************************         
+ ****************************************CONFIGURE*************************************************************          
  *Open your Daw. Select your hiduino usb midi device and then press "midi learn" in the plugin or DAW 
  *to configure your pedalboard. move or press your pedalboard,and that`s it
- **************************************************************************************************
- ******************************************************************************************************************************         
-Colaborations,suggestions,schematics,some libraries here: https://srmorrris.github.io/ArduinoUSBMidiPedal-board/
+ **************************************************************************************************************
+ **************************************************************************************************************       
+Colaborations,suggestions,schematics, instructions, all the stuff here:
+https://github.com/SrMorrris/Arduino-USB-Midi-Pedalboard
+
+You can visit my web-page, and see all my MIDI devices i have built:
+https://srmorrris.github.io/AH-HI-MAHI-WEB-OS-/
+
+Elias Barbero Cano Mayo 2021.
+Actualizado septiembre 2022. Sabiñanigo.
  ----------------------------------------------------------------------------------------------------------------------------*/
  
-#include <AnalogMultiButton.h>                            //Will be used for connect two or more buttons,using resistors, to one analog input on arduino.
-#include <LcdBarGraphX.h>                                 //Used for display Bar graphs on Lcd screen
-#include <LiquidCrystal.h>                                //Used for LCD I2C screen
-#include <LiquidCrystal_I2C.h>                            //Used for LCD I2C screen
-#include <Encoder.h>                                      //Used for encoder
-#include <Control_Surface.h>                              //Include Control Surface library (
-#include <Arduino_Helpers.h>                               //Include the Arduino Helpers library.
-#include <AH/Containers/ArrayHelpers.hpp>                    //Include the ArrayHelpers library.
-#include <AH/Hardware/Button.hpp>                              //Include the Button library.
-#include <AH/Hardware/ExtendedInputOutput/AnalogMultiplex.hpp>    //Include the AnalogMultiplex library.
-#include <LiquidMenu.h>                                         //Will be used for build a menu and various screens on the lcd
-#include <hd44780.h>                                           //Used for LCD I2C screen
-#include <LCD.h>                                              //Used for LCD I2C screen
+#include <AnalogMultiButton.h>                                   //Will be used for connect two or more buttons,using resistors, to one analog input on arduino.
+#include <LcdBarGraphX.h>                                        //Used for display Bar graphs on Lcd screen.
+#include <LiquidCrystal.h>                                       //Used for LCD I2C screen.
+#include <LiquidCrystal_I2C.h>                                   //Used for LCD I2C screen.
+#include <Encoder.h>                                             //Used for encoder.
+#include <Control_Surface.h>                                     //Include Control Surface library.
+#include <Arduino_Helpers.h>                                     //Include the Arduino Helpers library.
+#include <AH/Containers/ArrayHelpers.hpp>                        //Include the ArrayHelpers library.
+#include <AH/Hardware/Button.hpp>                                //Include the Button library.
+#include <AH/Hardware/ExtendedInputOutput/AnalogMultiplex.hpp>   //Include the AnalogMultiplex library.
+#include <LiquidMenu.h>                                          //Will be used for build a menu and various screens on the lcd.
+#include <hd44780.h>                                             //Used for LCD I2C screen.
+#include <LCD.h>                                                 //Used for LCD I2C screen.
 
 USBMIDI_Interface usbmidi;   
  
@@ -319,7 +324,7 @@ void setup() {
 
       
   /* -- initializing the LCD.first you see simulating a "old screen init",
-   *  and then shows "inisio" and "esperarsus" (latin characters for start and wait) */
+   *  and then shows "inisio" and "esperarsus" (latin characters for start and wait ;D) */
   lcd.begin(4, lcdNumCols);
   lcd.clear();
   lcd.begin(4, lcdNumCols);

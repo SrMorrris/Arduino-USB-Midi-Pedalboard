@@ -1,13 +1,16 @@
 In Arduino IDE..
 
--PRESS PROGRAM 
--Include library 
--Select "add zip"
+-Select "PROGRAM". 
+-Select "Include library". 
+-Select "add zip"....
 
 and you have to select every zip file here, one library, each time..
 
-When you finished installation 3 libraries, you have to search for this libraries on IDE:
--tools---"admin.library"
+When you have finished the installation all libraries (3 libraries),then you have to search for this libraries on IDE:
+-Select "tools".
+-Select "admin.library".
+
+and you have to search and install all this libraries:
 
 #include <AnalogMultiButton.h>                                   Search for this library in iDE (author:damien clarke)
 #include <LcdBarGraphX.h>                                        search for this library in ide (author:balazs kelemen)
